@@ -1,3 +1,8 @@
-<app-task-item *ngFor="let task of tasks" [task]="task">
-
+<app-task-item *ngFor="let task of tasks"
+               [task]="task"
+               (onDeleteTask)="deleteTask(task)"
+               (onToggleReminder)="toggleReminder(task)"
+>
+  <!-- on lui a passe une propriete de task qui ([task]) qui sera egale a une individuelle task
+  issue de la boucle-->
 </app-task-item>
